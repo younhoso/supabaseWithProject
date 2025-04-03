@@ -1,3 +1,3 @@
-# Next.js X Supabase X Cursor AI
+# Next.js X Supabase
 
-Part 3. Next.js로 콘텐츠 판매 웹앱 만들기
+Next.js로 SNS 간편 로그인 만들기
