@@ -7,21 +7,21 @@ import UserProfile from "@/components/UserProfile";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-2 lg:gap-8 row-start-2 items-center w-full lg:max-w-3xl mx-auto lg:px-8 px-2 pt-2">
+    <main className="">
       <UserProfile />
-      <div className="sticky top-0 z-10 bg-white w-full">
+      <div className="">
         <NavigationTabs />
       </div>
 
       {/* 히어로 섹션 */}
-      <HeroSection />
+      {/* <HeroSection /> */}
       {/* Kakao Login Button */}
-      <div className="mt-4">
+      <div className="">
         <KakaoLoginButton />
       </div>
 
       {/* 상세 내용 섹션 */}
-      <div className="w-full lg:max-w-3xl mx-auto mt-8">
+      <div className="">
         <CourseDetails />
       </div>
     </main>
