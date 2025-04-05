@@ -62,8 +62,8 @@
     },
     {
       "name": "Supabase Database Query",
-      "description": "Supabase 데이터베이스 쿼리 작성",
-      "prompt": "Supabase 데이터베이스에서 데이터를 읽고, 쓰고, 업데이트하는 코드를 작성해줘.\n\n쿼리 요구 사항:\n{{query}}",
+      "description": "Supabase 데이터베이스 쿼리 및 이미지 업로드/다운로드",
+      "prompt": "Supabase를 사용해 데이터베이스에 데이터를 읽고, 쓰고, 업데이트하는 코드와 함께\n이미지를 업로드하고 다운로드하는 코드도 포함해서 작성해줘.\n\n요구 사항:\n{{query}}",
       "variables": ["query"]
     }
   ]
