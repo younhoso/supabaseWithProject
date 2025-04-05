@@ -1,4 +1,4 @@
-export default function NavigationTabs() {
+const NavigationTabs = () => {
   return (
     <div defaultValue="product" className="w-full">
       <div className="grid w-full grid-cols-2">
@@ -7,4 +7,6 @@ export default function NavigationTabs() {
       </div>
     </div>
   );
-}
+};
+
+export default NavigationTabs;

@@ -2,7 +2,7 @@
 
 import useAuth from '@/hooks/useAuth';
 
-export default function UserProfile() {
+const UserProfile = () => {
   const { users, handleLogout } = useAuth();
 
   return (
@@ -24,4 +24,6 @@ export default function UserProfile() {
       )}
     </div>
   );
-}
+};
+
+export default UserProfile;

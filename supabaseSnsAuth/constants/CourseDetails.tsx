@@ -1,5 +1,6 @@
-import React from "react";
-import MarkdownRenderer from "../src/components/MarkdownRenderer";
+import React from 'react';
+
+import MarkdownRenderer from '../src/components/MarkdownRenderer';
 
 const courseDetails = `
 ## 강의 소개
