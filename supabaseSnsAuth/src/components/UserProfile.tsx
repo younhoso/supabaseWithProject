@@ -1,10 +1,9 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import { supabase } from "@/utils/supabase/supabaseClient";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Button } from "./ui/button";
-import { User } from "@/types/user";
+import { useEffect, useState } from 'react';
+
+import { User } from '@/types/user';
+import { supabase } from '@/utils/supabase/supabaseClient';
 
 export default function UserProfile() {
   const [users, setUsers] = useState<User | null>(null);
@@ -25,11 +24,9 @@ export default function UserProfile() {
     fetchUser();
 
     // 세션 상태 변화 리스너 설정
-    const { data: authListener } = supabase.auth.onAuthStateChange(
-      (_, session) => {
-        setUsers(session?.user as User);
-      }
-    );
+    const { data: authListener } = supabase.auth.onAuthStateChange((_, session) => {
+      setUsers(session?.user as User);
+    });
 
     return () => {
       authListener?.subscription.unsubscribe(); // 컴포넌트 언마운트 시 리스너 제거
@@ -43,20 +40,20 @@ export default function UserProfile() {
   };
 
   return (
-    <div className="flex items-center gap-4">
+    <div>
       {users && (
         <>
-          <Avatar>
-            <AvatarImage src={users.identities[0].identity_data.avatar_url} />
-            <AvatarFallback>사용자</AvatarFallback>
-          </Avatar>
           <div>
-            <p>{users.identities[0].identity_data.name}</p>
-            <p>{users?.email}</p>
+            <div>
+              <img src={users.identities[0].identity_data.avatar_url} alt="사용자" />
+              <div>사용자</div>
+            </div>
+            <div>
+              <p>{users.identities[0].identity_data.name}</p>
+              <p>{users?.email}</p>
+            </div>
+            <div onClick={handleLogout}>로그아웃</div>
           </div>
-          <Button variant="outline" onClick={handleLogout} className="ml-4">
-            로그아웃
-          </Button>
         </>
       )}
     </div>

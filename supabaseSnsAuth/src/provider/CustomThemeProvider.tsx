@@ -5,25 +5,19 @@ import { ReactNode } from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 
 import StyledComponentsRegistry from '@/libs/registry';
-import { InitGlobalStyled } from '@/stories/app/styles/init';
-import { fontSizes, fontWeight } from '@/stories/app/styles/theme';
-
-import { GRAY_COLORS_OBJECT, MAIN_THEME_COLORS_OBJECT } from '../stories/app/libs';
+import { InitGlobalStyled } from '@/styles/init';
+import { FONTSIZES, FONTWEIGHT } from '@/styles/theme';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    GRAY_COLORS_OBJECT: typeof GRAY_COLORS_OBJECT;
-    MAIN_THEME_COLORS_OBJECT: typeof MAIN_THEME_COLORS_OBJECT;
-    fontWeight: typeof fontWeight;
-    fontSizes: typeof fontSizes;
+    FONTWEIGHT: typeof FONTWEIGHT;
+    FONTSIZES: typeof FONTSIZES;
   }
 }
 
 export const theme: DefaultTheme = {
-  GRAY_COLORS_OBJECT,
-  MAIN_THEME_COLORS_OBJECT,
-  fontWeight,
-  fontSizes,
+  FONTWEIGHT,
+  FONTSIZES,
 };
 
 export default function CustomThemeProvider({ children }: { children: ReactNode }) {

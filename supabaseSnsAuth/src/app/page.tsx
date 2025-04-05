@@ -1,9 +1,11 @@
-"use client";
-import NavigationTabs from "@/components/NavigationTabs";
-import HeroSection from "@/components/HeroSection";
-import CourseDetails from "../../constants/CourseDetails";
-import KakaoLoginButton from "@/components/KakaoLoginButton";
-import UserProfile from "@/components/UserProfile";
+'use client';
+
+import HeroSection from '@/components/HeroSection';
+import KakaoLoginButton from '@/components/KakaoLoginButton';
+import NavigationTabs from '@/components/NavigationTabs';
+import UserProfile from '@/components/UserProfile';
+
+import CourseDetails from '../../constants/CourseDetails';
 
 export default function Home() {
   return (
